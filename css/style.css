@@ -1,0 +1,116 @@
+/* index page */
+header{
+    background-color: #37474f;
+    padding: 5px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.image{
+    display: block;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#edeff1;;
+}
+h1{
+    margin: 20px;
+}
+.display{
+    display: flex; 
+    flex-direction: row; 
+    gap: 20px;
+    /* flex-wrap: wrap; */
+}
+.textbook, .main-menu{
+    flex-basis: 50%; 
+}
+.textbook p{
+    margin: 18px;
+}
+.hiddensubcontent p{
+    margin: 20px;
+}
+.hiddensubcontent{
+    display: none;
+}
+.main-menu li a:hover + .hiddensubcontent{
+    display: block;
+}
+a:link, :visited{
+    text-decoration: none;
+    color: #942425;
+}
+
+@media only screen and (max-width:600px){
+    .display{
+        display: flex; 
+        flex-direction: column; 
+    }
+}
+
+/* cs and business pages */
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 5px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+.grid a{
+    margin-top: 40px;
+}
+dl{
+    margin: 25px;
+}
+.button{
+    background-color: #fe6e40;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100px;
+    height: 35px;
+    font-size: 1.0rem;
+    border-radius: 5px;
+    margin: 15px;
+    margin-left: 25px;
+    visibility: hidden;
+    opacity: 0; 
+    transition: opacity 1s ease;
+}
+.one, .two, .three, .four{
+    max-width: 100%;
+}
+.container{
+    flex: 20%;
+    background-color: white;
+    margin: 5px;
+}
+.container:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.container:hover .button{
+    visibility: visible;
+    opacity: 1;
+}
+@media only screen and (max-width:750px){
+    .grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 60px;
+    }
+    header{
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width:550px){
+    .grid{
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        font-size: 0.4rem;
+    }
+}
